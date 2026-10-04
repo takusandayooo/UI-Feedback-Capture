@@ -170,3 +170,5 @@ HTML（抜粋）: <button id="hero-cta">プロジェクトをはじめる →</b
 | Chromeに入れて使い始める | [セットアップ](docs/SETUP.md) |
 | コメント・画像・音声の使い方 | [使い方](docs/USAGE.md) |
 | 使用技術・コード構成・開発・配布 | [技術構成と開発ガイド](docs/DEVELOPMENT.md) |
+
+[プライバシーポリシー](docs/PRIVACY.md)
