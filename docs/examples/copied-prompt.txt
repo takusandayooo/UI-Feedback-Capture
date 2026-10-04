@@ -1,0 +1,28 @@
+# UI修正依頼
+
+URL: https://example.com/
+ページ: Studio — デザインのデモ
+
+以下の要素を修正してください。セレクターと周辺情報から対象を確認してください。
+
+## 1. h1「アイデアを、
+伝わるデザインに。」
+セレクター: h1#hero-title
+DOMパス: html > body > main > h1#hero-title
+現在の文言: アイデアを、
+伝わるデザインに。
+位置（ページ座標）: x=65, y=205, 幅=650, 高さ=143
+表示領域: 1280×800 / スクロール: 0, 0
+スタイル: {"display":"block","color":"rgb(41, 49, 47)","background-color":"rgba(0, 0, 0, 0)","font-family":"system-ui, sans-serif","font-size":"55px","font-weight":"650","line-height":"71.5px","text-align":"start","padding":"0px","margin":"24px 0px","border":"0px none rgb(41, 49, 47)","border-radius":"0px","width":"650px","height":"143px"}
+HTML（抜粋）: <h1 id="hero-title">アイデアを、<br>伝わるデザインに。</h1>
+修正指示: 見出しを少し小さくして、行間を広げてください。
+
+## 2. button「プロジェクトをはじめる →」
+セレクター: button#hero-cta
+DOMパス: html > body > main > button#hero-cta
+現在の文言: プロジェクトをはじめる →
+位置（ページ座標）: x=65, y=464, 幅=220, 高さ=50
+表示領域: 1280×800 / スクロール: 0, 0
+スタイル: {"display":"inline-block","color":"rgb(255, 255, 255)","background-color":"rgb(83, 105, 79)","font-family":"system-ui, sans-serif","font-size":"15px","font-weight":"400","line-height":"24px","text-align":"center","padding":"13px 25px","margin":"20px 0px 35px","border":"0px none rgb(255, 255, 255)","border-radius":"30px","width":"219.703px","height":"50px"}
+HTML（抜粋）: <button id="hero-cta">プロジェクトをはじめる →</button>
+修正指示: ボタンを紫色にして、角丸を12pxにしてください。

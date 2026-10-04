@@ -1,0 +1,37 @@
+{
+  "exportHtml": "<h1 id=\"hero-title\">アイデアを、<br>伝わるデザインに。</h1>",
+  "tag": "h1",
+  "selector": "h1#hero-title",
+  "path": "html > body > main > h1#hero-title",
+  "text": "アイデアを、\n伝わるデザインに。",
+  "html": "<h1 id=\"hero-title\">アイデアを、<br>伝わるデザインに。</h1>",
+  "styles": {
+    "display": "block",
+    "color": "rgb(41, 49, 47)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "font-family": "system-ui, sans-serif",
+    "font-size": "55px",
+    "font-weight": "650",
+    "line-height": "71.5px",
+    "text-align": "start",
+    "padding": "0px",
+    "margin": "24px 0px",
+    "border": "0px none rgb(41, 49, 47)",
+    "border-radius": "0px",
+    "width": "650px",
+    "height": "143px"
+  },
+  "bounds": {
+    "x": 65,
+    "y": 205,
+    "width": 650,
+    "height": 143
+  },
+  "viewport": {
+    "width": 1280,
+    "height": 800,
+    "scrollX": 0,
+    "scrollY": 0
+  },
+  "instruction": "見出しを少し小さくして、行間を広げてください。"
+}
