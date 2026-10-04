@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "UI Feedback Capture",
+  "version": "1.6.3",
+  "description": "ページの要素と画像への修正指示を、AI向けプロンプトにまとめます。",
+  "permissions": ["activeTab", "scripting", "storage", "clipboardWrite"],
+  "action": {
+    "default_title": "UIの修正指示を作成",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}
