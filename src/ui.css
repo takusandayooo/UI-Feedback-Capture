@@ -172,7 +172,7 @@ textarea[readonly] {
 .actions #pick {
   flex: 1;
 }
-.actions #capture-menu-toggle {
+.actions #capture {
   flex: 1;
 }
 .capture-options {

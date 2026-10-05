@@ -636,10 +636,7 @@ import { renderUI } from "./ui";
     $("#cancel-pick").focus({ preventScroll: true });
   }
 
-  for (const [toggleId, targetId] of [
-    ["menu-toggle", "menu"],
-    ["capture-menu-toggle", "capture-options"],
-  ]) {
+  for (const [toggleId, targetId] of [["menu-toggle", "menu"]]) {
     $(`#${toggleId}`).onclick = () => {
       const target = $(`#${targetId}`);
       target.hidden = !target.hidden;
@@ -687,12 +684,20 @@ import { renderUI } from "./ui";
   $("#cancel-pick").onclick = cancelPicking;
   $("#pick-capture").onclick = () => {
     stopPicking();
-    $("#capture-options").hidden = false;
-    $("#capture-menu-toggle").setAttribute("aria-expanded", "true");
-    $("#capture").focus({ preventScroll: true });
+    captureImage($("#capture-mode").value === "full" ? "full" : "visible");
   };
   $("#pick").onclick = startPicking;
-  host.addEventListener("ui-feedback-activate", startPicking);
+  function showPanel() {
+    if (capturing) return;
+    if (pendingRecapture) settleRecapture(false);
+    if (!closeInlineComment(false)) return;
+    voice.cancel();
+    host.hidden = false;
+    $(".editor").hidden = true;
+    stopPicking();
+    $("#pick").focus({ preventScroll: true });
+  }
+  host.addEventListener("ui-feedback-activate", showPanel);
   document.addEventListener(
     "pointermove",
     (event) => {
@@ -1110,5 +1115,5 @@ import { renderUI } from "./ui";
     })
     .catch(() => status("下書きを読み込めませんでした。"));
   refresh();
-  startPicking();
+  showPanel();
 })();
