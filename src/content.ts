@@ -631,7 +631,7 @@ import { renderUI } from "./ui";
     current = null;
     $(".editor").hidden = true;
     $(".highlight").hidden = true;
-    $(".panel").hidden = true;
+    $(".panel").hidden = false;
     $(".hint").hidden = false;
     $("#cancel-pick").focus({ preventScroll: true });
   }
@@ -694,8 +694,7 @@ import { renderUI } from "./ui";
     voice.cancel();
     host.hidden = false;
     $(".editor").hidden = true;
-    stopPicking();
-    $("#pick").focus({ preventScroll: true });
+    startPicking();
   }
   host.addEventListener("ui-feedback-activate", showPanel);
   document.addEventListener(
@@ -920,6 +919,7 @@ import { renderUI } from "./ui";
       $("#editor-capture-mode").value = mode;
     }
     const note = fromEditor ? $("#image-note").value : "";
+    stopPicking();
     clearHover();
     voice.cancel();
     capturing = true;
