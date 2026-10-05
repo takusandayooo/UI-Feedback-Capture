@@ -682,10 +682,15 @@ import { renderUI } from "./ui";
   };
   function cancelPicking() {
     stopPicking();
-    if (!session.items.length && !imageData) host.hidden = true;
-    else $("#pick").focus();
+    $("#pick").focus({ preventScroll: true });
   }
   $("#cancel-pick").onclick = cancelPicking;
+  $("#pick-capture").onclick = () => {
+    stopPicking();
+    $("#capture-options").hidden = false;
+    $("#capture-menu-toggle").setAttribute("aria-expanded", "true");
+    $("#capture").focus({ preventScroll: true });
+  };
   $("#pick").onclick = startPicking;
   host.addEventListener("ui-feedback-activate", startPicking);
   document.addEventListener(

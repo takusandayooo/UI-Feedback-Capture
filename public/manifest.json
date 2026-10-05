@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "UI Feedback Capture",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "ページの要素と画像への修正指示を、AI向けプロンプトにまとめます。",
   "permissions": ["activeTab", "scripting", "storage", "clipboardWrite"],
   "action": {
